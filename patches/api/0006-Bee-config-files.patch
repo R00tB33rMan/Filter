@@ -10,7 +10,7 @@ index 0e4d5345a5590d1a5d98cf11eb6e3649303c3ebb..d98767de95cec06a4438c6b2a9d53399
 +++ b/src/main/java/org/bukkit/Server.java
 @@ -1981,6 +1981,13 @@ public interface Server extends PluginMessageRecipient, net.kyori.adventure.audi
          }
-         // Pufferfish end
+         // Purpur end
  
 +        // Bee start
 +        @NotNull
