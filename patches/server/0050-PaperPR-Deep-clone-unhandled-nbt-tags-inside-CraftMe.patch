@@ -17,5 +17,5 @@ index 3c4dadd0012c11191c873fe25a7625193563915d..2099a2cb1d87d2529c42481a011440e9
 -        this.unhandledTags.putAll(meta.unhandledTags);
 +        meta.unhandledTags.forEach((key, tag) -> this.unhandledTags.put(key, tag.copy())); // Paper - Deep clone unhandled nbt tags
          this.persistentDataContainer.putAll(meta.persistentDataContainer.getRaw());
-
+ 
          this.internalTag = meta.internalTag;

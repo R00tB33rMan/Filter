@@ -58,4 +58,4 @@ index 091fd1a6083a040d8959113eebb1e37717a741b4..fd72938fa63b6207070c1f4d456073e7
 +        dontSendFirePacketsIfPlayerHasFireResistance = getBoolean("logic.dont-send-fire-packets-if-player-has-fire-resistance", dontSendFirePacketsIfPlayerHasFireResistance);
 +    }
  }
-\ No newline at end of file 
+\ No newline at end of file

@@ -12,7 +12,7 @@ index a7b6e22daf64abca311bc5771192a3c09368537f..6120ca5390a5d20e422f555a21aa3289
 @@ -89,15 +89,18 @@ public class FriendlyByteBuf extends ByteBuf {
          this.source = parent;
      }
-
+ 
 -    public static int getVarIntSize(int value) {
 -        for (int j = 1; j < 5; ++j) {
 -            if ((value & -1 << j * 7) == 0) {
@@ -32,13 +32,13 @@ index a7b6e22daf64abca311bc5771192a3c09368537f..6120ca5390a5d20e422f555a21aa3289
 +        return VARINT_EXACT_BYTE_LENGTHS[Integer.numberOfLeadingZeros(value)]; // Paper - Optimize VarInts
      }
 +    //Paper end - Optimize VarInts
-
+ 
      public static int getVarLongSize(long value) {
          for (int j = 1; j < 10; ++j) {
 @@ -505,7 +508,22 @@ public class FriendlyByteBuf extends ByteBuf {
          return new UUID(this.readLong(), this.readLong());
      }
-
+ 
 +    // Paper start - Optimize VarInts
      public FriendlyByteBuf writeVarInt(int value) {
 +        // Peel the one and two byte count cases explicitly as they are the most common VarInt sizes

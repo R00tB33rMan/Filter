@@ -11,7 +11,7 @@ index 355c9f79fd3132848a00eacde951d1e1bfa92737..f39b6d8eae3533d2795036e863566f61
 +++ b/src/main/java/org/bukkit/craftbukkit/persistence/CraftPersistentDataTypeRegistry.java
 @@ -93,6 +93,15 @@ public final class CraftPersistentDataTypeRegistry {
      }
-
+ 
      private final Map<Class, TagAdapter> adapters = new HashMap<>();
 +    // Paper start - Fix CME
 +    private TagAdapter getAdapter(Class type) {
@@ -22,7 +22,7 @@ index 355c9f79fd3132848a00eacde951d1e1bfa92737..f39b6d8eae3533d2795036e863566f61
 +        }
 +    }
 +    // Paper end - Fix CME
-
+ 
      /**
       * Creates a suitable adapter instance for the primitive class type
 @@ -212,7 +221,7 @@ public final class CraftPersistentDataTypeRegistry {
@@ -32,7 +32,7 @@ index 355c9f79fd3132848a00eacde951d1e1bfa92737..f39b6d8eae3533d2795036e863566f61
 -        return this.adapters.computeIfAbsent(type, CREATE_ADAPTER).build(value);
 +        return getAdapter(type).build(value); // Paper - Fix CME
      }
-
+ 
      /**
 @@ -228,7 +237,7 @@ public final class CraftPersistentDataTypeRegistry {
       * type was found
@@ -41,7 +41,7 @@ index 355c9f79fd3132848a00eacde951d1e1bfa92737..f39b6d8eae3533d2795036e863566f61
 -        return this.adapters.computeIfAbsent(type, CREATE_ADAPTER).isInstance(base);
 +        return getAdapter(type).isInstance(base); // Paper - Fix CME
      }
-
+ 
      /**
 @@ -249,7 +258,7 @@ public final class CraftPersistentDataTypeRegistry {
       * type was found

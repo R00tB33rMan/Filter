@@ -7,11 +7,11 @@ Subject: [PATCH] PaperPR Use DataConverter for itemstack/entity
 https://github.com/PaperMC/Paper/pull/7068
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/util/CraftMagicNumbers.java b/src/main/java/org/bukkit/craftbukkit/util/CraftMagicNumbers.java
-index 15007c9aa3a3bfc3bd47223a2fd3b0247b258178..77767a81c374ec3e2fef78f3c5210cb9983de326 100644
+index 527b685faf2bc80ff0eaa7b890af4d8a8a63143f..28146811e6dec9246a22d967055b33bb45c08f1e 100644
 --- a/src/main/java/org/bukkit/craftbukkit/util/CraftMagicNumbers.java
 +++ b/src/main/java/org/bukkit/craftbukkit/util/CraftMagicNumbers.java
-@@ -453,8 +453,8 @@ public final class CraftMagicNumbers implements UnsafeValues {
-
+@@ -458,8 +458,8 @@ public final class CraftMagicNumbers implements UnsafeValues {
+ 
          CompoundTag compound = deserializeNbtFromBytes(data);
          int dataVersion = compound.getInt("DataVersion");
 -        Dynamic<Tag> converted = DataFixers.getDataFixer().update(References.ITEM_STACK, new Dynamic<Tag>(NbtOps.INSTANCE, compound), dataVersion, getDataVersion());
@@ -19,10 +19,10 @@ index 15007c9aa3a3bfc3bd47223a2fd3b0247b258178..77767a81c374ec3e2fef78f3c5210cb9
 +        compound = ca.spottedleaf.dataconverter.minecraft.MCDataConverter.convertTag(ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry.ITEM_STACK, compound, dataVersion, getDataVersion()); // Paper - rewrite dataconverter
 +        return CraftItemStack.asCraftMirror(net.minecraft.world.item.ItemStack.of(compound));
      }
-
+ 
      @Override
-@@ -474,8 +474,7 @@ public final class CraftMagicNumbers implements UnsafeValues {
-
+@@ -479,8 +479,7 @@ public final class CraftMagicNumbers implements UnsafeValues {
+ 
          CompoundTag compound = deserializeNbtFromBytes(data);
          int dataVersion = compound.getInt("DataVersion");
 -        Dynamic<Tag> converted = DataFixers.getDataFixer().update(References.ENTITY_TREE, new Dynamic<>(NbtOps.INSTANCE, compound), dataVersion, getDataVersion());
