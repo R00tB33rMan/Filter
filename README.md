@@ -1,7 +1,7 @@
 [home]: https://pufferfish.host
 [knowledgebase]: https://docs.pufferfish.host
 [discord]: https://discord.gg/reZw4vQV9H
-[downloads]: https://pufferfish.host/downloads
+[downloads]: https://github.com/R00tB33rMan/Pufferfish-Test/releases
 [optguide]: https://docs.pufferfish.host/optimization/pufferfish-server-optimization-guide/
 
 # Pufferfish
