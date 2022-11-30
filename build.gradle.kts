@@ -35,9 +35,9 @@ subprojects {
         options.release.set(17)
     }
 
-    tasks.withType<Javadoc> {
-        options.encoding = Charsets.UTF_8.name()
-    }
+//     tasks.withType<Javadoc> {
+//         options.encoding = Charsets.UTF_8.name()
+//     }
 
     tasks.withType<ProcessResources> {
         filteringCharset = Charsets.UTF_8.name()
@@ -71,15 +71,4 @@ paperweight {
             serverOutputDir.set(layout.projectDirectory.dir("pufferfish-server"))
         }
     }
-}
-
-sourceSets {
-    build {
-        java.srcDir file('src/main/java')
-    }
-}
-
-javadoc {
-    source = sourceSets.main.allJava
-    classpath = configurations.compile
 }
