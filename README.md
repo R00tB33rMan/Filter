@@ -4,7 +4,7 @@
 [downloads]: https://github.com/R00tB33rMan/Pufferfish-Test/releases
 [optguide]: https://docs.pufferfish.host/optimization/pufferfish-server-optimization-guide/
 
-# Pufferfish
+# Pufferfish-Test
 A highly optimized Paper fork designed for large servers requiring both maximum performance, stability, and "enterprise" features.
 
 [Homepage][home] - [Downloads][downloads] - [Discord][discord] - [Knowledgebase][knowledgebase] - [Optimization Guide][optguide]
