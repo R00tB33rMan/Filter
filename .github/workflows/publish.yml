@@ -30,7 +30,7 @@ jobs:
         run: |
           ./gradlew createReobfPaperclipJar --stacktrace
           mkdir -p target
-          cp ./build/libs/pufferfish-paperclip-${{ steps.version.outputs.version }}-reobf.jar ./target/pufferfish-launcher-${{ steps.version.outputs.mcversion }}.jar
+          cp ./build/libs/pufferfish-paperclip-${{ steps.version.outputs.version }}-reobf.jar ./target/pufferfish-server-${{ steps.version.outputs.mcversion }}.jar
       - name: Release
         if: github.ref_name == "ver/${{ steps.version.outputs.mcversion }}"
         uses: marvinpinto/action-automatic-releases@latest
