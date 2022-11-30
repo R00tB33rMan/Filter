@@ -39,4 +39,4 @@ jobs:
           automatic_release_tag: "${{ steps.version.outputs.mcversion }}"
           prerelease: false
           title: 'Pufferfish ${{ steps.version.outputs.mcversion }}'
-          files: ./target/pufferfish-paperclip-${{ steps.version.outputs.mcversion }}.jar
+          files: ./target/pufferfish-server-${{ steps.version.outputs.mcversion }}.jar
