@@ -72,3 +72,14 @@ paperweight {
         }
     }
 }
+
+sourceSets {
+    build {
+        java.srcDir file('src/main/java')
+    }
+}
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+}
