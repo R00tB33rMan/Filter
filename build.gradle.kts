@@ -57,7 +57,7 @@ subprojects {
 }
 
 paperweight {
-    serverProject.set(project(":pufferfish-server"))
+    serverProject.set(project(":filter-server"))
 
     remapRepo.set("https://maven.fabricmc.net/")
     decompileRepo.set("https://files.minecraftforge.net/maven/")
