@@ -57,7 +57,7 @@ subprojects {
 }
 
 paperweight {
-    serverProject.set(project(":pufferfish-server"))
+    serverProject.set(project(":filter-server"))
 
     remapRepo.set("https://maven.fabricmc.net/")
     decompileRepo.set("https://files.minecraftforge.net/maven/")
@@ -67,8 +67,8 @@ paperweight {
             apiPatchDir.set(layout.projectDirectory.dir("patches/api"))
             serverPatchDir.set(layout.projectDirectory.dir("patches/server"))
 
-            apiOutputDir.set(layout.projectDirectory.dir("pufferfish-api"))
-            serverOutputDir.set(layout.projectDirectory.dir("pufferfish-server"))
+            apiOutputDir.set(layout.projectDirectory.dir("filter-api"))
+            serverOutputDir.set(layout.projectDirectory.dir("filter-server"))
         }
     }
 }

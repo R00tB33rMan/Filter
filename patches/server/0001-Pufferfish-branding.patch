@@ -29,8 +29,7 @@ index b0e4f11e8af4b909a56bb5576d05ef0537fb25f7..5344140dd36ee7b2ca82461b082c8e32
              "Main-Class" to "org.bukkit.craftbukkit.Main",
              "Implementation-Title" to "CraftBukkit",
 -            "Implementation-Version" to "git-Paper-$implementationVersion",
--            "Implementation-Version" to "git-Pufferfish-$implementationVersion", // Pufferfish
-+            "Implementation-Version" to "git-Filter-$implementationVersion", // Pufferfish // Pufferfish // Filter
++            "Implementation-Version" to "git-Filter-$implementationVersion", // Paper // Pufferfish // Filter
              "Implementation-Vendor" to date, // Paper
              "Specification-Title" to "Bukkit",
              "Specification-Version" to project.version,
