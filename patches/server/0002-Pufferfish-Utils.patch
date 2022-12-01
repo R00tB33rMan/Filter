@@ -56,7 +56,7 @@ index 0000000000000000000000000000000000000000..53f2df00c6809618a9ee3d2ea72e85e8
 +    public static final PufferfishLogger LOGGER = new PufferfishLogger();
 +
 +    private PufferfishLogger() {
-+        super("Pufferfish", null);
++        super("Filter", null);
 +
 +        setParent(Bukkit.getLogger());
 +        setLevel(Level.ALL);

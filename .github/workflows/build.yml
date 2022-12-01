@@ -1,4 +1,4 @@
-name: Build Pufferfish
+name: Build Filter
 on: push
 
 jobs:

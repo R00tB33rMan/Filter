@@ -15,7 +15,7 @@ index b0e4f11e8af4b909a56bb5576d05ef0537fb25f7..5344140dd36ee7b2ca82461b082c8e32
  dependencies {
 -    implementation(project(":paper-api"))
 -    implementation(project(":paper-mojangapi"))
-+    implementation(project(":pufferfish-api")) // Pufferfish // Paper
++    implementation(project(":filter-api")) // Pufferfish // Paper
 +    // Pufferfish start
 +    implementation("io.papermc.paper:paper-mojangapi:1.19.2-R0.1-SNAPSHOT") {
 +        exclude("io.papermc.paper", "paper-api")
@@ -29,7 +29,8 @@ index b0e4f11e8af4b909a56bb5576d05ef0537fb25f7..5344140dd36ee7b2ca82461b082c8e32
              "Main-Class" to "org.bukkit.craftbukkit.Main",
              "Implementation-Title" to "CraftBukkit",
 -            "Implementation-Version" to "git-Paper-$implementationVersion",
-+            "Implementation-Version" to "git-Pufferfish-$implementationVersion", // Pufferfish
+-            "Implementation-Version" to "git-Pufferfish-$implementationVersion", // Pufferfish
++            "Implementation-Version" to "git-Filter-$implementationVersion", // Pufferfish // Pufferfish // Filter
              "Implementation-Vendor" to date, // Paper
              "Specification-Title" to "Bukkit",
              "Specification-Version" to project.version,
@@ -42,7 +43,7 @@ index 7b1843e16745ca8db2244e17490d291401f22679..061716934ba0a1f01e4d85d664034f72
              // Only start Metrics, if it's enabled in the config
              if (config.getBoolean("enabled", true)) {
 -                Metrics metrics = new Metrics("Paper", serverUUID, logFailedRequests, Bukkit.getLogger());
-+                Metrics metrics = new Metrics("Pufferfish", serverUUID, logFailedRequests, Bukkit.getLogger()); // Pufferfish
++                Metrics metrics = new Metrics("Filter", serverUUID, logFailedRequests, Bukkit.getLogger()); // Pufferfish // Filter
  
                  metrics.addCustomChart(new Metrics.SimplePie("minecraft_version", () -> {
                      String minecraftVersion = Bukkit.getVersion();
@@ -207,7 +208,7 @@ index 6dc6c3bccb4ba34268a87b0754c87eb1e0df4135..6ba71433f50e7fdfed5e9da273d7163f
      @DontObfuscate
      public String getServerModName() {
 -        return "Paper"; // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
-+        return "Pufferfish"; // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
++        return "Filter"; // Filter - Filter // Pufferfish - Pufferfish > // Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
      }
  
      public SystemReport fillSystemReport(SystemReport details) {
@@ -220,7 +221,7 @@ index 4212568bf8de6988c71f43d3e2152fa0fe51d0d7..6ec5572d4bd6d4279d22ecbd64583e9b
  
  public final class CraftServer implements Server {
 -    private final String serverName = "Paper"; // Paper
-+    private final String serverName = "Pufferfish"; // Paper // Pufferfish
++    private final String serverName = "Filter"; // Paper // Pufferfish // Filter
      private final String serverVersion;
      private final String bukkitVersion = Versioning.getBukkitVersion();
      private final Logger logger = Logger.getLogger("Minecraft");
@@ -246,7 +247,7 @@ index 774556a62eb240da42e84db4502e2ed43495be17..80553face9c70c2a3d897681e7761df8
          String result = "Unknown-Version";
  
 -        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/io.papermc.paper/paper-api/pom.properties");
-+        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/gg.pufferfish.pufferfish/pufferfish-api/pom.properties"); // Pufferfish
++        InputStream stream = Bukkit.class.getClassLoader().getResourceAsStream("META-INF/maven/gg.pufferfish.pufferfish/filter-api/pom.properties"); // Pufferfish // Filter
          Properties properties = new Properties();
  
          if (stream != null) {

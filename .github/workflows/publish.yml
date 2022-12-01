@@ -1,4 +1,4 @@
-name: Publish Pufferfish
+name: Publish Filter
 on: [workflow_dispatch]
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         run: |
           ./gradlew createReobfPaperclipJar --stacktrace
           mkdir -p target
-          cp ./build/libs/pufferfish-paperclip-${{ steps.version.outputs.version }}-reobf.jar ./target/pufferfish-server-${{ steps.version.outputs.mcversion }}.jar
+          cp ./build/libs/filter-paperclip-${{ steps.version.outputs.version }}-reobf.jar ./target/filter-server-${{ steps.version.outputs.mcversion }}.jar
       - name: Release
         if: github.ref_name == "ver/${{ steps.version.outputs.mcversion }}"
         uses: marvinpinto/action-automatic-releases@latest
@@ -38,5 +38,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: "${{ steps.version.outputs.mcversion }}"
           prerelease: false
-          title: 'Pufferfish ${{ steps.version.outputs.mcversion }}'
-          files: ./target/pufferfish-server-${{ steps.version.outputs.mcversion }}.jar
+          title: 'Filter ${{ steps.version.outputs.mcversion }}'
+          files: ./target/filter-server-${{ steps.version.outputs.mcversion }}.jar
