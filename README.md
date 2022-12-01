@@ -1,15 +1,15 @@
-[home]: https://pufferfish.host
+[home]: https://rootbeer.co [Coming Soon]
 [knowledgebase]: https://docs.pufferfish.host
-[discord]: https://discord.gg/reZw4vQV9H
-[downloads]: https://github.com/R00tB33rMan/Pufferfish-Test/releases
-[optguide]: https://docs.pufferfish.host/optimization/pufferfish-server-optimization-guide/
+[discord]: https://discord.gg/RootBeer [Coming Soon]
+[downloads]: https://github.com/R00tB33rMan/Filter/releases
+[optguide]: https://docs.pufferfish.host/optimization/pufferfish-server-optimization-guide
 
-# Pufferfish-Test
-A highly optimized Paper fork designed for large servers requiring both maximum performance, stability, and "enterprise" features.
+# Filter
+A highly optimized Paper fork designed for large servers requiring both maximum performance, stability, miscellaneous, and "enterprise" features.
 
 [Homepage][home] - [Downloads][downloads] - [Discord][discord] - [Knowledgebase][knowledgebase] - [Optimization Guide][optguide]
 
-## Features
+## Pufferfish Features
 
 - **Sentry Integration** Easily track all errors coming from your server in excruciating detail
 - **Better Entity Performance** Reduces the performance impact of entities by skipping useless work and making barely-noticeable changes to behavior
@@ -26,7 +26,7 @@ A highly optimized Paper fork designed for large servers requiring both maximum 
 ## Downloads
 You can download the latest JAR file [here][downloads].
 
-## Pufferfish Host
+## Pufferfish Host [Recommended Provider]
 
 Are you looking for a server hosting provider to take your server's performance to the next level? Check out [Pufferfish Host][home]! We run only the best hardware so you can be sure that your server's hardware isn't bogging you down.
 This fork is developed by [Pufferfish Host][home], and we can provide additional tailored performance support to customers.
