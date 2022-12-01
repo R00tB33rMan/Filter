@@ -1,6 +1,6 @@
-[home]: https://rootbeer.co [Coming Soon]
+[home]: https://rootbeer.co
 [knowledgebase]: https://docs.pufferfish.host
-[discord]: https://discord.gg/RootBeer [Coming Soon]
+[discord]: https://discord.gg/RootBeer
 [downloads]: https://github.com/R00tB33rMan/Filter/releases
 [optguide]: https://docs.pufferfish.host/optimization/pufferfish-server-optimization-guide
 
